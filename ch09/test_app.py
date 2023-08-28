@@ -24,7 +24,7 @@ class TestApp(unittest.TestCase):
         dal.session.close()
 
     def setUp(self):
-        dal.session = dal.Session()
+        dal.session = dal.Session() # Create a NEW session for each test
 
     def tearDown(self):
         dal.session.rollback()
